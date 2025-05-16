@@ -19,6 +19,8 @@ public static class Parser
             options.AddArgument("-headless");
 
             driver = new FirefoxDriver(options);
+
+            LogManager.Log("Firefox driver was initialized successfully");
         }
         catch (Exception ex)
         {
@@ -40,6 +42,8 @@ public static class Parser
             urlContent = driver.FindElement(By.TagName("body")).Text;
 
             urlContent = Regex.Replace(urlContent, @"\s+", " ").Trim();
+
+            LogManager.Log("Parsed successfully");
         }
         else
             LogManager.Log("(Parser Error) Firefox driver is null reference!");

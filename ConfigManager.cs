@@ -30,6 +30,8 @@ public sealed class ConfigManager
                 WriteConfig(@default);
             }
 
+            LogManager.Log("ConfigManager was initialized successfully");
+
             return true;
         }
         catch (Exception ex)
@@ -62,6 +64,8 @@ public sealed class ConfigManager
                         LogManager.Log($"(Read Config Error) Corrupted config line! Content: {line}");
                 }
             }
+
+            LogManager.Log("Config was read successfully");
         }
         catch (Exception ex)
         {
@@ -91,6 +95,8 @@ public sealed class ConfigManager
                         LogManager.Log($"(Read Config Error) Corrupted config line! Content: {line}");
                 }
             }
+
+            LogManager.Log("Config was read successfully");
         }
         catch (Exception ex)
         {
@@ -113,6 +119,8 @@ public sealed class ConfigManager
                 text += $"{pair.Key}:{pair.Value}\n";
             
             sW.Write(text);
+
+            LogManager.Log("Config was writen successfully");
         }
         catch (Exception ex)
         {
