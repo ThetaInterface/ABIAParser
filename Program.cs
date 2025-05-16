@@ -145,6 +145,7 @@ public static class Program
             }
 
             mode = ProgramMode.Undefined;
+            args = [];
         }
     }
 

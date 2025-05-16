@@ -5,7 +5,7 @@ namespace ABIAParser;
 public sealed class ConfigManager
 {
     private static string ConfigPath = ""; 
-
+    
     public static bool Init()
     {
         ConfigPath = AppContext.BaseDirectory + "config.ini";
